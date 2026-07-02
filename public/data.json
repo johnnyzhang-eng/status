@@ -1,0 +1,102 @@
+{
+  "org": "Dashmote",
+  "mission": "Menu-OCR platform — brand & price data across markets.",
+  "generatedAt": "2026-07-02T10:45:00Z",
+  "refreshedAgoHours": 0,
+  "blockers": [
+    { "project": "Customer App", "text": "Failure-alert email credentials invalid — a real failure would page no one.", "issue": 612 }
+  ],
+  "projects": [
+    {
+      "id": "menu-ocr-research",
+      "name": "Menu-OCR Research",
+      "blurb": "The catalog “brain” — canonicalization, false-friend audits, QA gates.",
+      "status": "ontrack",
+      "health": "gold",
+      "version": "v0.2.129",
+      "updatedDays": 6,
+      "next": "Image-grounded false-friend audit before the next customer sign-off.",
+      "nextSuggested": "Wire the variant-promotion pass (inferred from recent commits).",
+      "momentum": { "commits": 42, "commitsDelta": 14, "prs": 7, "prsDelta": 3, "issues": 3, "issuesDelta": -1, "spark": [3,5,4,7,9,8,6,10,7,11] },
+      "rubric": [
+        { "label": "README", "pass": true },
+        { "label": "Owner", "pass": true },
+        { "label": "Active <7d", "pass": true },
+        { "label": "Next pinned", "pass": true },
+        { "label": "No blockers", "pass": true }
+      ],
+      "shipped": [
+        { "version": "v0.2.129", "date": "Jun 26", "summary": "Closed out the last false-friend matches for the newest market." },
+        { "version": "v0.2.128", "date": "Jun 26", "summary": "Relaxed re-derive recovered ~12.6k additional outlets." },
+        { "version": "v0.2.127", "date": "Jun 25", "summary": "Demoted two short-alias false positives." },
+        { "version": "v0.2.125", "date": "Jun 24", "summary": "Price fix + native-currency field + home-currency fallback." }
+      ],
+      "inFlight": [
+        { "number": 10, "title": "Phase A cross-market canonicalization (gated)", "author": "johnnyzhang-eng", "ageDays": 3 }
+      ],
+      "owners": [
+        { "handle": "johnnyzhang-eng", "name": "Johnny Zhang" },
+        { "handle": "", "name": "Claude" }
+      ],
+      "tags": ["catalog", "QA", "research"],
+      "links": [{ "label": "Repo", "url": "#" }]
+    },
+    {
+      "id": "ocr-pipeline",
+      "name": "OCR Pipeline",
+      "blurb": "The OCR runner — batch mode, sharding, cost controls.",
+      "status": "ontrack",
+      "health": "silver",
+      "version": "v0.2.164",
+      "updatedDays": 2,
+      "next": "Finish parallel sharding so a full big-market run completes in hours.",
+      "nextSuggested": "Address the batch-mode cost gap surfaced in the recent bill.",
+      "momentum": { "commits": 18, "commitsDelta": 6, "prs": 4, "prsDelta": 2, "issues": 2, "issuesDelta": 0, "spark": [2,3,5,4,6,5,7,6,8,6] },
+      "rubric": [
+        { "label": "README", "pass": true },
+        { "label": "Owner", "pass": true },
+        { "label": "Active <7d", "pass": true },
+        { "label": "Next pinned", "pass": true },
+        { "label": "No blockers", "pass": true }
+      ],
+      "shipped": [
+        { "version": "v0.2.164", "date": "Jul 1", "summary": "Added the missing runtime dependency that crashed batch mode." },
+        { "version": "v0.2.163", "date": "Jun 30", "summary": "Batch OCR mode (cost lever, quality-gated)." },
+        { "version": "v0.2.160", "date": "Jun 29", "summary": "Never blindly re-run already-processed images." }
+      ],
+      "inFlight": [],
+      "owners": [{ "handle": "johnnyzhang-eng", "name": "Johnny Zhang" }],
+      "tags": ["ocr", "cost"],
+      "links": [{ "label": "Repo", "url": "#" }]
+    },
+    {
+      "id": "customer-app",
+      "name": "Customer App",
+      "blurb": "The app surface — quality review, reporting, exports.",
+      "status": "blocked",
+      "health": "bronze",
+      "version": "—",
+      "updatedDays": 2,
+      "next": "Restore the failure-alert email so silent staleness can’t slip by.",
+      "nextSuggested": "",
+      "momentum": { "commits": 9, "commitsDelta": -2, "prs": 1, "prsDelta": -1, "issues": 4, "issuesDelta": 1, "spark": [6,5,4,5,3,4,2,3,2,2] },
+      "rubric": [
+        { "label": "README", "pass": true },
+        { "label": "Owner", "pass": true },
+        { "label": "Active <7d", "pass": true },
+        { "label": "Next pinned", "pass": true },
+        { "label": "No blockers", "pass": false }
+      ],
+      "shipped": [
+        { "version": "—", "date": "Jul 1", "summary": "Shipped native-price + currency display to users." },
+        { "version": "—", "date": "Jun 26", "summary": "Quality-review surface: grid, flags, insight cards, comments." }
+      ],
+      "inFlight": [
+        { "number": 612, "title": "Alert email credentials invalid", "author": "johnnyzhang-eng", "ageDays": 5 }
+      ],
+      "owners": [{ "handle": "johnnyzhang-eng", "name": "Johnny Zhang" }],
+      "tags": ["app", "alerts"],
+      "links": [{ "label": "Repo", "url": "#" }]
+    }
+  ]
+}

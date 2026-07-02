@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root, html.dark {
+  --bg1: #0a0e16;
+  --bg2: #10182a;
+  --panel: #141b2b;
+  --panel2: #1a2334;
+  --line: #26314a;
+  --line-soft: #1e2739;
+  --ink: #e9eef7;
+  --muted: #93a2ba;
+  --faint: #61708a;
+  --green: #34d399;
+  --amber: #fbbf24;
+  --red: #f87171;
+  --blue: #60a5fa;
+  --purple: #a78bfa;
+}
+html.light {
+  --bg1: #e9edf4;
+  --bg2: #f7f9fc;
+  --panel: #ffffff;
+  --panel2: #f3f6fa;
+  --line: #e3e8f0;
+  --line-soft: #edf1f6;
+  --ink: #0f172a;
+  --muted: #52607a;
+  --faint: #8996ab;
+  --green: #059669;
+  --amber: #d97706;
+  --red: #dc2626;
+  --blue: #2563eb;
+  --purple: #7c3aed;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(1100px 620px at 18% -8%, var(--bg2), var(--bg1)) fixed;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.panel { background: var(--panel); border: 1px solid var(--line); }
+.hairline { border-color: var(--line); }
+
+/* metallic health chips */
+.chip-gold   { background: linear-gradient(135deg, #f6dd93, #d3a53a); color: #3a2c05; }
+.chip-silver { background: linear-gradient(135deg, #e9eef5, #a9b4c5); color: #29313f; }
+.chip-bronze { background: linear-gradient(135deg, #e2ab7a, #ac6a3c); color: #3a1d09; }
+
+/* status accent bar on cards */
+.accentbar::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--accent); border-radius: 16px 0 0 16px;
+}
+
+.lift { transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease; }
+.lift:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+  box-shadow: 0 14px 34px rgba(0,0,0,.34);
+}
+
+.dim-note { color: var(--faint); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
