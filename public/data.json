@@ -1,7 +1,7 @@
 {
   "org": "Dashmote",
   "mission": "Menu-OCR platform — brand & price data across markets.",
-  "generatedAt": "2026-07-02T03:11:15.763Z",
+  "generatedAt": "2026-07-02T03:37:08.939Z",
   "refreshedAgoHours": 0,
   "blockers": [
     {
@@ -136,8 +136,8 @@
         "issuesDelta": 0,
         "spark": [
           3,
-          3,
-          29,
+          6,
+          26,
           17,
           36,
           0,
@@ -238,15 +238,15 @@
         "issuesDelta": 0,
         "spark": [
           53,
-          65,
-          112,
-          44,
-          26,
+          67,
+          110,
+          45,
+          25,
           61,
           25,
           20,
-          40,
-          23
+          41,
+          22
         ]
       },
       "rubric": [

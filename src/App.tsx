@@ -34,12 +34,14 @@ function fmtRefreshed(iso: string, agoHours: number) {
 /* ── Masthead: freshness is the thesis ── */
 function Masthead({ data, query, setQuery }: { data: BoardData; query: string; setQuery: (s: string) => void }) {
   const { light, toggle } = useTheme()
-  const stale = data.refreshedAgoHours > 18
+  // freshness is computed live from generatedAt, not baked — so staleness is real
+  const agoH = Math.max(0, (Date.now() - Date.parse(data.generatedAt)) / 3.6e6)
+  const stale = agoH > 18
   const c = stale ? 'var(--stop)' : 'var(--ok)'
   const attention = data.projects.filter(p => p.status === 'blocked' || p.health === 'bronze').length
   return (
     <header className="mb-7">
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <div className="eyebrow">Status Board</div>
           <h1 className="serif mt-1 font-semibold leading-none tracking-tight" style={{ color: 'var(--ink)', fontSize: 'clamp(30px,5vw,44px)' }}>
@@ -63,7 +65,7 @@ function Masthead({ data, query, setQuery }: { data: BoardData; query: string; s
       <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
         <span className="mono text-[11px] inline-flex items-center gap-2" style={{ color: c }}>
           <span className="beacon h-2 w-2 rounded-full" style={{ background: c, color: c }} />
-          {stale ? 'stale' : 'synced'} {fmtRefreshed(data.generatedAt, data.refreshedAgoHours)}
+          {stale ? 'stale' : 'synced'} {fmtRefreshed(data.generatedAt, agoH)}
         </span>
         <span className="mono text-[11px]" style={{ color: 'var(--faint)' }}>{data.projects.length} projects</span>
         {attention > 0 && (
@@ -317,7 +319,7 @@ export default function App() {
           {shown.length === 0 && <div className="mono mt-8 text-center" style={{ color: 'var(--faint)' }}>no projects match.</div>}
 
           <footer className="mono mt-12 text-center text-[11px]" style={{ color: 'var(--faint)' }}>
-            generated from repo activity · rebuilt on push + every 6h
+            generated from live repo activity · redeploys on every push
           </footer>
         </>
       )}
