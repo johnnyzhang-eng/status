@@ -1,0 +1,23 @@
+{
+  "_comment": "Copy to .sbconfig.json (gitignored) and fill in. The generator reads local repo clones + gh for counts, and merges these curated fields. denylist/denylistRaw = terms that must NEVER reach the public board (customer names, infra ids, SQL); generation fails if any appear in data.json.",
+  "org": "Your Org",
+  "mission": "One-line mission shown under the title.",
+  "denylist": ["word-bounded-secret-terms"],
+  "denylistRaw": ["substring secrets", "s3://", "arn:aws"],
+  "projects": [
+    {
+      "id": "my-project",
+      "name": "My Project",
+      "path": "/absolute/path/to/local/clone",
+      "repo": "owner/repo",
+      "blurb": "One line: what this project is.",
+      "status": "ontrack | blocked | paused | shipped | planning",
+      "next": "The one pinned next step (human-written).",
+      "blocker": "optional — if set, shows in the blocker strip and fails the health rubric",
+      "tags": ["tag1", "tag2"],
+      "owners": [{ "handle": "github-handle", "name": "Display Name" }],
+      "show": ["health", "momentum", "shipped", "inflight", "next", "owners", "tags"],
+      "internal": false
+    }
+  ]
+}

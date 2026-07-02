@@ -1,10 +1,13 @@
 {
   "org": "Dashmote",
   "mission": "Menu-OCR platform — brand & price data across markets.",
-  "generatedAt": "2026-07-02T10:45:00Z",
+  "generatedAt": "2026-07-02T03:11:15.763Z",
   "refreshedAgoHours": 0,
   "blockers": [
-    { "project": "Customer App", "text": "Failure-alert email credentials invalid — a real failure would page no one.", "issue": 612 }
+    {
+      "project": "Customer App",
+      "text": "Failure-alert email credentials invalid — a real failure would page no one."
+    }
   ],
   "projects": [
     {
@@ -16,87 +19,317 @@
       "version": "v0.2.129",
       "updatedDays": 6,
       "next": "Image-grounded false-friend audit before the next customer sign-off.",
-      "nextSuggested": "Wire the variant-promotion pass (inferred from recent commits).",
-      "momentum": { "commits": 42, "commitsDelta": 14, "prs": 7, "prsDelta": 3, "issues": 3, "issuesDelta": -1, "spark": [3,5,4,7,9,8,6,10,7,11] },
+      "nextSuggested": "",
+      "momentum": {
+        "commits": 27,
+        "commitsDelta": -33,
+        "prs": 9,
+        "prsDelta": 9,
+        "issues": 0,
+        "issuesDelta": 0,
+        "spark": [
+          33,
+          3,
+          1,
+          12,
+          36,
+          9,
+          6,
+          4,
+          11,
+          6
+        ]
+      },
       "rubric": [
-        { "label": "README", "pass": true },
-        { "label": "Owner", "pass": true },
-        { "label": "Active <7d", "pass": true },
-        { "label": "Next pinned", "pass": true },
-        { "label": "No blockers", "pass": true }
+        {
+          "label": "README",
+          "pass": true
+        },
+        {
+          "label": "Active <14d",
+          "pass": true
+        },
+        {
+          "label": "Next pinned",
+          "pass": true
+        },
+        {
+          "label": "No blockers",
+          "pass": true
+        }
       ],
       "shipped": [
-        { "version": "v0.2.129", "date": "Jun 26", "summary": "Closed out the last false-friend matches for the newest market." },
-        { "version": "v0.2.128", "date": "Jun 26", "summary": "Relaxed re-derive recovered ~12.6k additional outlets." },
-        { "version": "v0.2.127", "date": "Jun 25", "summary": "Demoted two short-alias false positives." },
-        { "version": "v0.2.125", "date": "Jun 24", "summary": "Price fix + native-currency field + home-currency fallback." }
+        {
+          "version": "v0.2.129",
+          "date": "26 Jun"
+        },
+        {
+          "version": "v0.2.128",
+          "date": "26 Jun"
+        },
+        {
+          "version": "v0.2.127",
+          "date": "25 Jun"
+        },
+        {
+          "version": "v0.2.126",
+          "date": "25 Jun"
+        },
+        {
+          "version": "v0.2.124",
+          "date": "23 Jun"
+        },
+        {
+          "version": "v0.2.123",
+          "date": "23 Jun"
+        }
       ],
       "inFlight": [
-        { "number": 10, "title": "Phase A cross-market canonicalization (gated)", "author": "johnnyzhang-eng", "ageDays": 3 }
+        {
+          "number": 10,
+          "ageDays": 9
+        }
       ],
       "owners": [
-        { "handle": "johnnyzhang-eng", "name": "Johnny Zhang" },
-        { "handle": "", "name": "Claude" }
+        {
+          "handle": "johnnyzhang-eng",
+          "name": "Johnny Zhang"
+        },
+        {
+          "handle": "",
+          "name": "Claude"
+        }
       ],
-      "tags": ["catalog", "QA", "research"],
-      "links": [{ "label": "Repo", "url": "#" }]
+      "tags": [
+        "catalog",
+        "QA",
+        "research"
+      ],
+      "links": [],
+      "show": [
+        "health",
+        "momentum",
+        "shipped",
+        "inflight",
+        "next",
+        "owners",
+        "tags"
+      ],
+      "internal": false
     },
     {
       "id": "ocr-pipeline",
       "name": "OCR Pipeline",
       "blurb": "The OCR runner — batch mode, sharding, cost controls.",
       "status": "ontrack",
-      "health": "silver",
+      "health": "gold",
       "version": "v0.2.164",
       "updatedDays": 2,
-      "next": "Finish parallel sharding so a full big-market run completes in hours.",
-      "nextSuggested": "Address the batch-mode cost gap surfaced in the recent bill.",
-      "momentum": { "commits": 18, "commitsDelta": 6, "prs": 4, "prsDelta": 2, "issues": 2, "issuesDelta": 0, "spark": [2,3,5,4,6,5,7,6,8,6] },
+      "next": "Cap batch output so run-away menus truncate cheap, then re-verify quality.",
+      "nextSuggested": "",
+      "momentum": {
+        "commits": 14,
+        "commitsDelta": -71,
+        "prs": 10,
+        "prsDelta": -20,
+        "issues": 0,
+        "issuesDelta": 0,
+        "spark": [
+          3,
+          3,
+          29,
+          17,
+          36,
+          0,
+          2,
+          3,
+          5,
+          4
+        ]
+      },
       "rubric": [
-        { "label": "README", "pass": true },
-        { "label": "Owner", "pass": true },
-        { "label": "Active <7d", "pass": true },
-        { "label": "Next pinned", "pass": true },
-        { "label": "No blockers", "pass": true }
+        {
+          "label": "README",
+          "pass": true
+        },
+        {
+          "label": "Active <14d",
+          "pass": true
+        },
+        {
+          "label": "Next pinned",
+          "pass": true
+        },
+        {
+          "label": "No blockers",
+          "pass": true
+        }
       ],
       "shipped": [
-        { "version": "v0.2.164", "date": "Jul 1", "summary": "Added the missing runtime dependency that crashed batch mode." },
-        { "version": "v0.2.163", "date": "Jun 30", "summary": "Batch OCR mode (cost lever, quality-gated)." },
-        { "version": "v0.2.160", "date": "Jun 29", "summary": "Never blindly re-run already-processed images." }
+        {
+          "version": "v0.2.164",
+          "date": "30 Jun"
+        },
+        {
+          "version": "v0.2.163",
+          "date": "30 Jun"
+        },
+        {
+          "version": "v0.2.162",
+          "date": "30 Jun"
+        },
+        {
+          "version": "v0.2.161",
+          "date": "29 Jun"
+        },
+        {
+          "version": "v0.2.160",
+          "date": "26 Jun"
+        },
+        {
+          "version": "v0.2.159",
+          "date": "23 Jun"
+        }
       ],
-      "inFlight": [],
-      "owners": [{ "handle": "johnnyzhang-eng", "name": "Johnny Zhang" }],
-      "tags": ["ocr", "cost"],
-      "links": [{ "label": "Repo", "url": "#" }]
+      "inFlight": [
+        {
+          "number": 42,
+          "ageDays": 9
+        }
+      ],
+      "owners": [
+        {
+          "handle": "johnnyzhang-eng",
+          "name": "Johnny Zhang"
+        }
+      ],
+      "tags": [
+        "ocr",
+        "cost"
+      ],
+      "links": [],
+      "show": [
+        "health",
+        "momentum",
+        "shipped",
+        "inflight",
+        "next",
+        "owners",
+        "tags"
+      ],
+      "internal": false
     },
     {
       "id": "customer-app",
       "name": "Customer App",
       "blurb": "The app surface — quality review, reporting, exports.",
       "status": "blocked",
-      "health": "bronze",
+      "health": "silver",
       "version": "—",
       "updatedDays": 2,
       "next": "Restore the failure-alert email so silent staleness can’t slip by.",
       "nextSuggested": "",
-      "momentum": { "commits": 9, "commitsDelta": -2, "prs": 1, "prsDelta": -1, "issues": 4, "issuesDelta": 1, "spark": [6,5,4,5,3,4,2,3,2,2] },
+      "momentum": {
+        "commits": 133,
+        "commitsDelta": -130,
+        "prs": 113,
+        "prsDelta": -119,
+        "issues": 11,
+        "issuesDelta": 0,
+        "spark": [
+          53,
+          65,
+          112,
+          44,
+          26,
+          61,
+          25,
+          20,
+          40,
+          23
+        ]
+      },
       "rubric": [
-        { "label": "README", "pass": true },
-        { "label": "Owner", "pass": true },
-        { "label": "Active <7d", "pass": true },
-        { "label": "Next pinned", "pass": true },
-        { "label": "No blockers", "pass": false }
+        {
+          "label": "README",
+          "pass": true
+        },
+        {
+          "label": "Active <14d",
+          "pass": true
+        },
+        {
+          "label": "Next pinned",
+          "pass": true
+        },
+        {
+          "label": "No blockers",
+          "pass": false
+        }
       ],
-      "shipped": [
-        { "version": "—", "date": "Jul 1", "summary": "Shipped native-price + currency display to users." },
-        { "version": "—", "date": "Jun 26", "summary": "Quality-review surface: grid, flags, insight cards, comments." }
-      ],
+      "shipped": [],
       "inFlight": [
-        { "number": 612, "title": "Alert email credentials invalid", "author": "johnnyzhang-eng", "ageDays": 5 }
+        {
+          "number": 575,
+          "ageDays": 9
+        },
+        {
+          "number": 543,
+          "ageDays": 14
+        },
+        {
+          "number": 532,
+          "ageDays": 16
+        },
+        {
+          "number": 522,
+          "ageDays": 20
+        },
+        {
+          "number": 499,
+          "ageDays": 27
+        },
+        {
+          "number": 389,
+          "ageDays": 49
+        },
+        {
+          "number": 216,
+          "ageDays": 64
+        },
+        {
+          "number": 160,
+          "ageDays": 70
+        },
+        {
+          "number": 155,
+          "ageDays": 71
+        },
+        {
+          "number": 124,
+          "ageDays": 76
+        }
       ],
-      "owners": [{ "handle": "johnnyzhang-eng", "name": "Johnny Zhang" }],
-      "tags": ["app", "alerts"],
-      "links": [{ "label": "Repo", "url": "#" }]
+      "owners": [
+        {
+          "handle": "johnnyzhang-eng",
+          "name": "Johnny Zhang"
+        }
+      ],
+      "tags": [
+        "app",
+        "alerts"
+      ],
+      "links": [],
+      "show": [
+        "health",
+        "momentum",
+        "inflight",
+        "next",
+        "owners",
+        "tags"
+      ],
+      "internal": false
     }
   ]
 }
